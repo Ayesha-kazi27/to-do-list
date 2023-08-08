@@ -1,0 +1,28 @@
+<%- include("partials/header.ejs") %>
+<h1>Work</h1>
+
+<ul>
+    <li>
+
+         <form class="item" action="/work" method="post">
+              <input type="text" name="newItem" class="custominput" placeholder="New Task" autocomplete="off" />
+              <div class="button-custom">
+              <button type="submit" class="btn btn-outline-dark font" name="list" value=index list >Add</button>
+              </div>
+            </form>
+    </li>
+   <% newlitms.forEach((item)=>{ %>
+    <li>
+         <div class="box">
+       <div class="item p-x-2">
+         <input type="checkbox">
+         <p>
+           <%= item %>
+         </p>
+        </div>
+    </div>
+    </li>
+   <% }) %>
+    <ul>
+
+<%-include("partials/footer.ejs") %>
